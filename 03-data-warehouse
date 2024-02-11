@@ -129,9 +129,8 @@ No Points: Write a SELECT count(*) query FROM the materialized table you created
 
 select count(*) from ny_taxi.green_trips_partitioned;
 
-ANSWER:  estimate is 0 bytes.
-
-This is confusing given that the latest article from Google BigQuery says that count(*) reads all of the data in the table in order to get the count:
+ANSWER:  estimate is 0 bytes.  Why?  I have to assume it's a limitation of the Estimator since the  latest article from Google BigQuery says 
+that count(*) reads all of the data in the table in order to get the number.
 https://cloud.google.com/knowledge/kb/bigquery-count-query-slot-utilization-and-rows-scanned-000004360
 
 
