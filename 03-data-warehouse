@@ -127,6 +127,8 @@ Depends on size of table, how often you're writing to the table, etc.
 ## (Bonus: Not worth points) Question 8:
 No Points: Write a SELECT count(*) query FROM the materialized table you created. How many bytes does it estimate will be read? Why?
 
+select count(*) from ny_taxi.green_trips_partitioned;
+
 ANSWER:  estimate is 0 bytes.
 
 This is confusing given that the latest article from Google BigQuery says that count(*) reads all of the data in the table in order to get the count:
